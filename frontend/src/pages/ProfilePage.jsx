@@ -216,7 +216,7 @@ export default function ProfilePage() {
 const styles = {
   container: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%)",
+    background: "linear-gradient(135deg, #a8d0e6 0%, #fbcce7 100%)",
   },
   content: {
     maxWidth: "900px",

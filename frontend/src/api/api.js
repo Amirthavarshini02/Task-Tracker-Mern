@@ -1,7 +1,10 @@
 import axios from "axios";
 
+// Fallback logic: if VITE_API_URL is missing, use localhost
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL + "/api"
+  baseURL: BASE_URL + "/api"
 });
 
 API.interceptors.request.use((req) => {

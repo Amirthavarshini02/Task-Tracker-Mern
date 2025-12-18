@@ -11,7 +11,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["task-tracker-mern-dsnn.vercel.app"],
+  origin: [
+    "http://localhost:5173",                 // Vite local dev
+    "https://task-tracker-mern-dsnn.vercel.app"  // Your Vercel frontend
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

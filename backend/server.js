@@ -11,11 +11,16 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: [
-    "http://localhost:5173",                 // Vite local dev
-    "https://task-tracker-mern-dsnn.vercel.app",
-    "task-tracker-mern-dsnn-bucq0ax21-amirthas-projects-10ad969e.vercel.app" // Your Vercel frontend
-  ],
+  origin: (origin, callback) => {
+    if (
+      origin?.includes("vercel.app") ||
+      origin === "http://localhost:5173"
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

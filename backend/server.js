@@ -13,7 +13,8 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",                 // Vite local dev
-    "https://task-tracker-mern-dsnn.vercel.app"  // Your Vercel frontend
+    "https://task-tracker-mern-dsnn.vercel.app",
+    "task-tracker-mern-dsnn-bucq0ax21-amirthas-projects-10ad969e.vercel.app" // Your Vercel frontend
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true

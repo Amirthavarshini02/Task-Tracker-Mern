@@ -14,6 +14,8 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://task-tracker-mern-dsnn.vercel.app",
+    "https://task-tracker-mern-dsnn-c8c526w44-amirthas-projects-10ad969e.vercel.app",
+    /^https:\/\/task-tracker-mern-dsnn.*\.vercel\.app$/
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
